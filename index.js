@@ -6,9 +6,9 @@
 
 const convertBtnEl = document.getElementById("convert-btn")
 const resultNumberEl = document.getElementById("result-number")
-const lengthEl = document.getElementById("length-el")
-const volumeEl = document.getElementById("volume-el")
-const massEl = document.getElementById("mass-el")
+const lengthEl = document.getElementById("length")
+const volumeEl = document.getElementById("volume")
+const massEl = document.getElementById("mass")
 
 const meterToFeet = 3.281
 const literToGallon = 0.264

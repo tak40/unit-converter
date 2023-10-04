@@ -5,14 +5,15 @@ body {
     text-align: center;
 }
 
-.wrapper {
+.content-wrapper {
     width: 80%;
     max-width: 550px;
     margin: 10px auto;
 }
 
-.top-container {
+.converter-section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #6943FF;
@@ -23,20 +24,13 @@ body {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
 }
 
-.top-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-}
-
 h2 {
     font-size: 28px;
     margin-top: 33px;
 }
 
 
-.resultNumber {
+.result-number {
     padding: 0;
     font-size: 58px;
     width: 117px;
@@ -49,7 +43,7 @@ h2 {
     margin: 10px 0;
 }
 
-.convertBtn {
+.convert-btn {
     font-size: 16px;
     width: 117px;
     height: 42px;
@@ -61,12 +55,14 @@ h2 {
     cursor: pointer; 
 }
 
-.convertBtn:disabled {
+.convert-btn:disabled {
     opacity: 0.7;
+    cursor: default;
 }
 
-.bottom-container {
+.conversion-results-section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #F4F4F4;
@@ -86,7 +82,7 @@ h2 {
 .unit-conversion {
     padding: 5px 0;
     width: 90%;
-    margin: 30px auto;
+    margin: 25px auto;
 }
 
 .unit-conversion p {
@@ -99,7 +95,21 @@ h2 {
     font-size: 20px;
 }
 
-.unit-conversion h3, 
-.unit-conversion p {
-    margin: 20px;
+footer {
+    text-align: center;
+    margin: 3em;
+}
+
+.footer-icon a {
+    font-size: 1em;
+    margin: 0 0.75em 2em 0.75em;
+}
+
+.footer-icon {
+    margin-bottom: 0.75em;
+}
+
+footer a {
+    color: #2B283A;
+    text-decoration: none;
 }
