@@ -7,15 +7,15 @@
 
 :root {
     /* Primary Colors */
-    --soft-teal: #A8DADC; /* Soft Teal */
-    --dark-navy-primary: #1D3557; /* Dark Navy */
-    --almost-white: #F9FAFC; /* Almost White */
-    --light-soft-teal: #D0E3E7; /* Lightened version of the Soft Teal*/
+    --soft-teal: #A8DADC; 
+    --dark-navy-primary: #1D3557;
+    --almost-white: #F9FAFC; 
+    --light-soft-teal: #D0E3E7; 
     
     /* Other Colors */
     --btn-disabled-opacity: 0.7;
-    --muted-dark-blue: #2B5069; /* Muted Dark Blue */
-    --dark-navy-general: #0E2439; /* Dark Navy for general use */
+    --muted-dark-blue: #2B5069;
+    --dark-navy-general: #0E2439; 
     --focus-color: #FFD700; /* Gold */
 }
 
@@ -49,7 +49,7 @@ a,
 
 h1 {
     color: var(--dark-navy-general);
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-top: 1em;
     letter-spacing: 1px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
@@ -75,16 +75,16 @@ h1 {
 
 /* Hover and Focus styles for the input field */
 .number-to-convert:hover {
-    border-color: var(--dark-navy-primary); /* Change border color on hover/focus */
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow for better visibility */
-    outline: none; /* Remove the default browser outline */
+    border-color: var(--dark-navy-primary); 
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); 
+    outline: none; 
 }
 
 /* Focus styles for the input field */
 .number-to-convert:focus {
     border-color: var(--focus-color); 
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3), 0 0 0 3px rgba(255, 215, 0, 0.4); /* Combine with the original shadow */
-    outline: none; /* Remove the default browser outline since we are using custom outlines now */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3), 0 0 0 3px rgba(255, 215, 0, 0.4); 
+    outline: none; 
 }
 
 .convert-btn {
@@ -112,7 +112,7 @@ h1 {
 /* Focus styles for the convert button */
 .convert-btn:focus {
     outline: 2px solid var(--focus-color);
-    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.4); /* Add a soft glow effect to the gold outline for more visibility */
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.4); 
     transform: scale(1.075); 
 }
 
@@ -159,8 +159,8 @@ footer {
 }
 
 .footer-icon a {
-    font-size: 1em;
-    padding: 0.5em;
+    font-size: 1.25em;
+    padding: 0 0.25em;
 }
 
 .footer-icon {
@@ -192,7 +192,6 @@ footer a:hover {
 @media (min-width: 768px) {
     .content-wrapper {
         width: 80%;
-        max-width: 550px;
         margin: 10px auto;
     }
 
@@ -202,14 +201,16 @@ footer a:hover {
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
     }
 
+    .number-to-convert, .convert-btn {
+        width: 40%; 
+    }
+
     .number-to-convert {
-        width: 117px;
         height: 83px;
     }
     
     .convert-btn {
         font-size: 1rem;
-        width: 117px;
         height: 42px;
     }
 
@@ -231,5 +232,15 @@ footer a:hover {
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    }
+}
+
+@media (min-width: 1024px) {
+    .content-wrapper {
+        max-width: 800px; 
+    }
+
+    .number-to-convert, .convert-btn {
+        width: 30%; 
     }
 }
