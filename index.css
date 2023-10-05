@@ -7,17 +7,16 @@
 
 :root {
     /* Primary Colors */
-    --converter-bg-color: #A8DADC; /* Soft Teal */
-    --primary-text-color: #1D3557; /* Dark Navy */
-    --results-bg-color: #F9FAFC; /* Almost White */
-    --secondary-text-color: #1D3557; /* Dark Navy for improved contrast on almost white */
-    --unit-box-bg-color: #D0E3E7; /* Lightened version of the Soft Teal*/
+    --soft-teal: #A8DADC; /* Soft Teal */
+    --dark-navy-primary: #1D3557; /* Dark Navy */
+    --almost-white: #F9FAFC; /* Almost White */
+    --light-soft-teal: #D0E3E7; /* Lightened version of the Soft Teal*/
     
     /* Other Colors */
     --btn-disabled-opacity: 0.7;
-    --border-color: #2B5069; /* Muted Dark Blue */
-    --btn-text-color: #1D3557; /* Dark Navy */
-    --text-color: #0E2439; /* Dark Navy for general use */
+    --muted-dark-blue: #2B5069; /* Muted Dark Blue */
+    --dark-navy-general: #0E2439; /* Dark Navy for general use */
+    --focus-color: #FFD700; /* Gold */
 }
 
 body {
@@ -31,6 +30,11 @@ body {
     width: 100%;
 }
 
+a, 
+.number-to-convert {
+    transition: all 0.3s ease-in-out;
+}
+
 /* ----- CONVERTER SECTION ----- */
 
 .converter-section {
@@ -38,13 +42,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--converter-bg-color);
-    color: var(--primary-text-color);
+    background: var(--soft-teal);
+    color: var(--dark-navy-primary);
     padding-bottom: 2em;
 }
 
 h1 {
-    color: var(--text-color);
+    color: var(--dark-navy-general);
     font-size: 2rem;
     margin-top: 1em;
     letter-spacing: 1px;
@@ -55,19 +59,32 @@ h1 {
     display: none;
 }
 
-
 .number-to-convert {
     padding: 0;
     font-size: 58px;
     width: 35%;
     height: 83px;
     border-radius: 5px;
-    border: 2px solid var(--border-color);
-    background: var(--converter-bg-color);
-    color: var(--primary-text-color);
+    border: 2px solid var(--muted-dark-blue);
+    background: var(--soft-teal);
+    color: var(--dark-navy-primary);
     text-align: center;
     margin: 10px 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Hover and Focus styles for the input field */
+.number-to-convert:hover {
+    border-color: var(--dark-navy-primary); /* Change border color on hover/focus */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow for better visibility */
+    outline: none; /* Remove the default browser outline */
+}
+
+/* Focus styles for the input field */
+.number-to-convert:focus {
+    border-color: var(--focus-color); 
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3), 0 0 0 3px rgba(255, 215, 0, 0.4); /* Combine with the original shadow */
+    outline: none; /* Remove the default browser outline since we are using custom outlines now */
 }
 
 .convert-btn {
@@ -75,25 +92,33 @@ h1 {
     font-weight: 500;
     width: 35%;
     height: 2.5em;
-    background-color: var(--results-bg-color);
+    background-color: var(--almost-white);
     border: none;
     border-radius: 5px;
-    color: var(--btn-text-color);
+    color: var(--dark-navy-primary);
     margin-top: 15px;
     cursor: pointer; 
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
+/* Hover styles for the convert button */
 .convert-btn:hover {
-    background-color: var(--btn-text-color); 
-    color: var(--results-bg-color);
+    background-color: var(--muted-dark-blue); 
+    color: var(--almost-white);
     transform: scale(1.075);
 }
 
+/* Focus styles for the convert button */
+.convert-btn:focus {
+    outline: 2px solid var(--focus-color);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.4); /* Add a soft glow effect to the gold outline for more visibility */
+    transform: scale(1.075); 
+}
+
 .convert-btn:active {
-    background-color: var(--btn-text-color); 
-    color: var(--results-bg-color);
+    background-color: var(--dark-navy-primary); 
+    color: var(--almost-white);
     transform: scale(0.95);
 }
 
@@ -109,18 +134,16 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--results-bg-color);
-    color: var(--secondary-text-color);
+    background-color: var(--almost-white);
     padding: 1.5em 0;
 }
-
 
 .unit-conversion {
     padding: 1.5em 0;
     width: 100%;
     margin: 1.25em auto;
     border-radius: 5px;
-    background-color: var(--unit-box-bg-color);
+    background-color: var(--light-soft-teal);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
 }
 
@@ -137,15 +160,11 @@ footer {
 
 .footer-icon a {
     font-size: 1em;
-    margin: 0 0.75em 2em 0.75em;
+    padding: 0.5em;
 }
 
 .footer-icon {
     margin-bottom: 0.75em;
-}
-
-.footer-text {
-    color: var(--secondary-text-color);
 }
 
 .footer-text p {
@@ -154,9 +173,21 @@ footer {
 }
 
 footer a {
-    color: var(--secondary-text-color);
+    color: var(--dark-navy-primary);
     text-decoration: none;
 }
+
+.footer-icon a:focus, 
+footer a:focus  {
+    outline: 2px solid var(--focus-color);
+    border-radius: 5px;
+}
+
+.footer-icon a:hover,
+footer a:hover {
+    border-bottom: 2px solid var(--focus-color);
+}
+
 
 @media (min-width: 768px) {
     .content-wrapper {
