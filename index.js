@@ -5,7 +5,7 @@
 */
 
 const convertBtnEl = document.getElementById("convert-btn")
-const resultNumberEl = document.getElementById("result-number")
+const resultNumberEl = document.getElementById("number-to-convert")
 const lengthEl = document.getElementById("length")
 const volumeEl = document.getElementById("volume")
 const massEl = document.getElementById("mass")
