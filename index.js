@@ -5,7 +5,7 @@
 */
 
 const convertBtnEl = document.getElementById("convert-btn")
-const numberToConvertEl = document.getElementById("number-to-convert")
+const inputNumberEl = document.getElementById("number-to-convert")
 const lengthEl = document.getElementById("length")
 const volumeEl = document.getElementById("volume")
 const massEl = document.getElementById("mass")
@@ -17,18 +17,18 @@ const feetToMeter = 0.3048
 const gallonToLiter = 3.78541
 const poundToKilogram = 0.453592
 
-numberToConvertEl.addEventListener("input", function() {
-    if (!isNaN(Number(numberToConvertEl.value))) {
+inputNumberEl.addEventListener("input", function() {
+    if (!isNaN(Number(inputNumberEl.value))) {
         convertBtnEl.disabled = false;
     }
 });
 
-numberToConvertEl.addEventListener("click", function(event) {
+inputNumberEl.addEventListener("click", function(event) {
     event.target.placeholder = ""
 });
 
 convertBtnEl.addEventListener("click", function() {
-    let baseValue = Number(numberToConvertEl.value)
+    let baseValue = Number(inputNumberEl.value)
     if (isNaN(baseValue)) {
         alert("Please enter a valid number.")
         convertBtnEl.disabled = true;
