@@ -88,7 +88,7 @@ h1 {
 .convert-btn:hover {
     background-color: var(--btn-text-color); 
     color: var(--results-bg-color);
-    transform: scale(1.05);
+    transform: scale(1.075);
 }
 
 .convert-btn:active {
@@ -117,7 +117,7 @@ h1 {
 
 .unit-conversion {
     padding: 1.5em 0;
-    width: 90%;
+    width: 100%;
     margin: 1.25em auto;
     border-radius: 5px;
     background-color: var(--unit-box-bg-color);
@@ -193,6 +193,7 @@ footer a {
 
     .unit-conversion {
         padding: 1.5em 0;
+        width: 90%;
     }
 
     .conversion-results-section {
