@@ -27,6 +27,12 @@ inputNumberEl.addEventListener("click", function(event) {
     event.target.placeholder = ""
 });
 
+inputNumberEl.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        convertBtnEl.click();
+    }
+});
+
 convertBtnEl.addEventListener("click", function() {
     let baseValue = Number(inputNumberEl.value)
     if (isNaN(baseValue)) {
