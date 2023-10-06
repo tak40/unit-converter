@@ -17,41 +17,42 @@
     <body>
         <main class="content-wrapper">
             <section class="converter-section">
-                <h1>Metric → Imperial <span>Unit Converter</span></h1>
-                <input class="number-to-convert" id="number-to-convert" type="text" placeholder="0">
+                <h1>Metric → Imperial <span aria-hidden="true">Unit Converter</span></h1>
+                <label for="number-to-convert" class="visually-hidden">Enter the number to convert</label>
+                <input class="number-to-convert" id="number-to-convert" type="number" placeholder="0">
                 <button class="convert-btn" id="convert-btn">Convert</button>
             </section>
             <section class="conversion-results-section">
-                <div class="unit-conversion">
+                <section class="unit-conversion">
                     <h3>Length (Meter → Feet)</h3>
                     <p id="length">20 meters = 65.616 feet | 20 feet = 6.096 meters</p>
-                </div>
-                <div class="unit-conversion">
+                </section>
+                <section class="unit-conversion">
                     <h3>Volume (Liters → Gallons)</h3>
                     <p id="volume">20 liters = 5.284 gallons | 20 gallons = 75.708 liters</p>
-                </div>
-                <div class="unit-conversion">
+                </section>
+                <section class="unit-conversion">
                     <h3>Mass (Kilograms → Pounds)</h3>
                     <p id="mass">20 kilos = 44.092 pounds | 20 pounds = 9.072 kilos</p>
-                </div>
+                </section>
             </section>
         </main>
 
         <footer>
-            <div id="footer-icon" class='footer-icon'>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+            <nav id="footer-icon" class="footer-icon" aria-label="Social Profiles">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" aria-label="Github profile">
                     <i id="github" class="fa-brands fa-github fa-xl footer-icon"></i>
                 </a>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" aria-label="Linkedin profile">
                     <i class="fa-brands fa-linkedin fa-xl footer-icon"></i>
                 </a>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" aria-label="X profile">
                     <i class="fa-brands fa-square-x-twitter fa-xl footer-icon"></i>
                 </a>
-            </div>
+            </nav>
             
-            <div class='footer-text'>
-                <p>Designed by <a href='https://twitter.com/scrimba' target="_blank" rel="noopener noreferrer">@Scrimba 💜</a> </p>
+            <div class="footer-text">
+                <p>Designed by <a href="https://twitter.com/scrimba" target="_blank" rel="noopener noreferrer">@Scrimba 💜</a> </p>
                 <p>Constructed by TK</p>
             </div>
         </footer>
