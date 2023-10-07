@@ -2,6 +2,7 @@
 
 ## Table of Contents
 - [Overview](#overview)
+- [Design Preview](#design-preview)
 - [Key Learnings](#key-learnings)
 - [Requirements](#requirements)
 - [Design Mockups](#design-mockups)
@@ -9,6 +10,17 @@
 
 ## Overview
 The Unit Converter App is a solo project (Module 3) from Scrimba's Frontend Career Path. The application is specifically tailored to facilitate conversions from Metric to Imperial units. With an intuitive interface, it aims to provide users with accurate and quick conversion results, enhancing their experience and efficiency in handling unit measurements.
+
+### Design Preview:
+
+**Desktop Version**
+
+![Desktop Version of Unit Converter App](assets/desktop.png)
+
+**Mobile Version**
+
+![Mobile Version of Unit Converter App](assets/mobile.png)
+
 
 ## Key Learnings
 - **User Experience (UX)**: Both in the initial stages and during the refactoring process, a strong emphasis was placed on UX principles. The objective was to ensure that the conversion process is intuitive, providing users with an easy and seamless experience.
